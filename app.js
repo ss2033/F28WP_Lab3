@@ -21,6 +21,14 @@ app.get('/api/register', (req, res) => {
 app.get('/api/login', (req, res) => {
     res.render('api/login');
 });
+//route for catalogue
+app.get('/api/catalogue', (req, res) => {
+    res.render('api/catalogue');
+});
+
+//pass requests to the router middleware 
+const router = require('./routes/apis'); 
+app.use(router);
 
 //make the app listen on port
 const port = process.argv[2] || process.env.PORT || 3000;
