@@ -14,20 +14,20 @@ app.get('/contacts', (req, res) => {
     res.render('contacts');
 });
 //route for client registration
-app.get('/api/register', (req, res) => {
-    res.render('api/register');
+app.get('/register', (req, res) => {
+    res.render('register');
 });
 //route for client login
-app.get('/api/login', (req, res) => {
-    res.render('api/login');
+app.get('/login', (req, res) => {
+    res.render('login');
 });
 //route for catalogue
-app.get('/api/catalogue', (req, res) => {
-    res.render('api/catalogue');
+app.get('/catalog', (req, res) => {
+    res.render('catalog');
 });
 
 //pass requests to the router middleware 
-const router = require('./routes/apis'); 
+const router = require('./routes/post'); 
 app.use(router);
 
 //make the app listen on port
