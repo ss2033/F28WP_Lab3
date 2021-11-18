@@ -39,6 +39,10 @@ app.get('/login', (req, res) => {
 app.get('/catalog', (req, res) => {
     res.render('catalog');
 });
+//route for article
+app.get('/article', (req, res) => {
+    res.render('article');
+});
 
 //pass requests to the router middleware 
 const router = require('./routes/apis'); 
